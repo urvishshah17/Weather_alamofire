@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+
 class ForcastService
 {
     // sample url: https://api.darksky.net/forecast/fed774dd2fdbda09c3e5600631cfa4ce/37.8267,-122.4233
@@ -19,7 +21,9 @@ class ForcastService
         forecastBaseURL = URL(String: "https://api.darksky.net/forecast/\(APIKey)")
     }
     func getCurrentWeather(latitude: Double, longitude: Double){
-        let forecastURL = URL(String: "\(forecastBaseURL)/\(latitude),\(longitude)")
+        if let forecastURL = URL(String: "\(forecastBaseURL)/\(latitude),\(longitude)"){
+            Alamofire.request()
+        }
     }
 }
 
