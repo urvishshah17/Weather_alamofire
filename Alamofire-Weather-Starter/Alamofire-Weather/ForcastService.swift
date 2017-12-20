@@ -18,7 +18,7 @@ class ForcastService
     init(APIKey: String)
     {
         self.forecastAPIKey = APIKey
-        forecastBaseURL = URL(String: "https://api.darksky.net/forecast/\(APIKey)")
+        forecastBaseURL = URL(string: "https://api.darksky.net/forecast/\(APIKey)")
     }
     func getCurrentWeather(latitude: Double, longitude: Double){
         if let forecastURL = URL(String: "\(forecastBaseURL)/\(latitude),\(longitude)"){
