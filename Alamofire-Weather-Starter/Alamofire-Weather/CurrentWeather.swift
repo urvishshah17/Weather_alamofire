@@ -19,10 +19,24 @@ class CurrentWeather{
         static let humidity = "humidity"
         static let precipProbability = "precipProbability"
         static let summary = "summary"
-        static icon = "icon"
+        static let icon = "icon"
     }
     init(WeatherDictionary: [String : Any])
     {
+        temprature = WeatherDictionary[WeatherKeys.temprature] as? Int
         
+        if let humidityDouble = WeatherDictionary[WeatherKeys.humidity] as? Double{
+            humidity = Int(humidityDouble * 100)
+        }else{
+            humidity = nil
+        }
+        
+        if let precipDouble = WeatherDictionary[WeatherKeys.precipProbability] as? Double{
+            precipProbability = Int(precipDouble * 100)
+        }else{
+            precipProbability = nil
+        }
+        summary = WeatherDictionary[WeatherKeys.summary] as? String
+        icon = WeatherDictionary[WeatherKeys.icon] as? String
     }
 }
