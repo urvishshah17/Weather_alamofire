@@ -21,7 +21,7 @@ class ForcastService
         forecastBaseURL = URL(string: "https://api.darksky.net/forecast/\(APIKey)")
     }
     func getCurrentWeather(latitude: Double, longitude: Double){
-        if let forecastURL = URL(String: "\(forecastBaseURL)/\(latitude),\(longitude)"){
+        if let forecastURL = URL(string: "\(forecastBaseURL)/\(latitude),\(longitude)"){
             Alamofire.request()
         }
     }
