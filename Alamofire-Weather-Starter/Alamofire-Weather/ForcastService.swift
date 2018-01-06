@@ -25,7 +25,7 @@ class ForcastService
             Alamofire.request(forecastURL).responseJSON(completionHandler: { (response) in
                
                 let jsonDictionary = response.result.value as?[String : Any]
-                if let currentWeatherDictionary = jsonDictionary["currently"] as?
+                if let currentWeatherDictionary = jsonDictionary!["currently"] as?
                 [String : Any]{
                     let currentWeather = CurrentWeather(WeatherDictionary: currentWeatherDictionary)
                     completion(currentWeather)

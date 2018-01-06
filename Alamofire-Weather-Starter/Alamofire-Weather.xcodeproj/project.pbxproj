@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1438E0E02D0F641A13931170 /* Pods_Alamofire_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273A3AAC040CB27D6040A55C /* Pods_Alamofire_Weather.framework */; };
+		15292D7C20014D6900B037D9 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15292D7B20014D6900B037D9 /* CurrentWeatherViewController.swift */; };
 		15AE16111FEA0B9C004EE94C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE16101FEA0B9C004EE94C /* CurrentWeather.swift */; };
 		15AE16131FEA158A004EE94C /* ForcastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE16121FEA158A004EE94C /* ForcastService.swift */; };
 		52CD91881EEE2E8300F79AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD91871EEE2E8300F79AAD /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15292D7B20014D6900B037D9 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		15AE16101FEA0B9C004EE94C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		15AE16121FEA158A004EE94C /* ForcastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastService.swift; sourceTree = "<group>"; };
 		1BD6CB0CA728ACF10D769980 /* Pods-Alamofire-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamofire-Weather.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alamofire-Weather/Pods-Alamofire-Weather.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				52CD91871EEE2E8300F79AAD /* AppDelegate.swift */,
 				52CD918B1EEE2E8300F79AAD /* Main.storyboard */,
+				15292D7B20014D6900B037D9 /* CurrentWeatherViewController.swift */,
 				15AE16101FEA0B9C004EE94C /* CurrentWeather.swift */,
 				15AE16121FEA158A004EE94C /* ForcastService.swift */,
 				52CD918E1EEE2E8300F79AAD /* Assets.xcassets */,
@@ -224,6 +227,7 @@
 				15AE16111FEA0B9C004EE94C /* CurrentWeather.swift in Sources */,
 				15AE16131FEA158A004EE94C /* ForcastService.swift in Sources */,
 				52CD91881EEE2E8300F79AAD /* AppDelegate.swift in Sources */,
+				15292D7C20014D6900B037D9 /* CurrentWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
