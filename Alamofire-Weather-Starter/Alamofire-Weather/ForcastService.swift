@@ -20,9 +20,20 @@ class ForcastService
         self.forecastAPIKey = APIKey
         forecastBaseURL = URL(string: "https://api.darksky.net/forecast/\(APIKey)")
     }
-    func getCurrentWeather(latitude: Double, longitude: Double){
-        if let forecastURL = URL(string: "\(forecastBaseURL)/\(latitude),\(longitude)"){
-            Alamofire.request()
+    func getCurrentWeather(latitude: Double, longitude: Double, completion: @escaping (CurrentWeather?) -> Void){
+        if let forecastURL = URL(string: "\(forecastBaseURL!)/\(latitude),\(longitude)"){
+            Alamofire.request(forecastURL).responseJSON(completionHandler: { (response) in
+               
+                let jsonDictionary = response.result.value as?[String : Any]
+                if let currentWeatherDictionary = jsonDictionary["currently"] as?
+                [String : Any]{
+                    let currentWeather = CurrentWeather(WeatherDictionary: currentWeatherDictionary)
+                    completion(currentWeather)
+                }else{
+                    completion(nil)
+                }
+           
+            })
         }
     }
 }
